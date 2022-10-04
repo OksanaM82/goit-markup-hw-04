@@ -132,11 +132,9 @@ margin-bottom: 25px;
 }
 .contacts-icon {
     margin-right: 10px;
-    fill: var(--clients-border);
+    fill: currentColor;
 
 }
-.contacts-link:hover .contacts-icon, 
-.contacts-link:focus .contacts-icon{fill: var(--accent-text-color);}
 .contacts-link{
     display: flex;
     justify-content: center;
@@ -159,10 +157,10 @@ padding-bottom: 94px;}
     background-color: var(--accent-background-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../img/fon.jpg);
- width: 1600px;
-    background-repeat: no-repeat;
+  max-width: 1600px;
+background-repeat: no-repeat;
     background-position: center;
-
+    background-size: cover;
 padding-top: 200px;
 padding-bottom: 200px;
 text-align: center;
@@ -304,59 +302,51 @@ color: var(--title-text-color)
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--soc-link-color);
         
 
     }
     .people-soc-link:hover,
     .people-soc-link:focus
-     { background-color: var(--accent-text-color);}
-
-     .people-soc-link:hover .people-soc-icon,
-     .people-soc-link:focus .people-soc-icon{fill: var(--hero-text-color);}
-
+     { background-color: var(--accent-text-color);
+    color: var(--hero-text-color);}
      .people-soc-icon 
-    {fill: var(--soc-link-color);}
+    {fill: currentColor;}
 
     /*Постійні клієнти*/
     .clients-link {
-        display: block;
         width: 170px;
         height: 92px;
         border-radius: 4px;
         border: 1px solid var(--clients-border);
         display: flex;
         align-items: center;
-        justify-content: center;}
+        justify-content: center;
+    color: var(--clients-border);}
 
         .clients-list {
             display: flex;
             gap: 30px;
             justify-content: center;}
             .clients-icon {
-                fill: var(--clients-border);
+                fill: currentColor;
 
             }
 
             .clients-link:hover,
             .clients-link:focus {
                 border-color: var(--accent-text-color);
+                color: var(--accent-text-color);
             } 
 
-            .clients-link:hover .clients-icon,
-            .clients-link:focus.clients-icon
-             { fill: var(--accent-text-color) }
-
-
-
+          
     /* Футер */
     .footer {
          background-color: var(--accent-background-color); 
     padding: 60px 0px;}
     .footer-container {display: flex;
-        gap: 70px;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        padding-right: 0px;
+    align-items: baseline;
+        
     } 
     .footer-list{
     }
@@ -394,9 +384,11 @@ color: var(--footer-contacts-color);}
 }
 .footer-item:last-child {margin-bottom: 0px;}
 .footer-soc-container {
+    margin-left: 70px;
 
 }
 .foter-soc-title {
+    font-size: 14px;
     font-weight: 700;
 letter-spacing: 0.03em;
 text-transform: uppercase;
@@ -458,7 +450,6 @@ letter-spacing: 0.03em;
         .portfolio-btn:hover,
         .portfolio-btn:focus {box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
             0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);} 
-        .card-link:hover,
         
         .portfolio-list{
             display: flex;
@@ -470,11 +461,11 @@ letter-spacing: 0.03em;
         }
 
         .portfolio-card {
-        padding-left: 24px;
-
-        }
-        .card-link:hover,
-        .card-link:focus {
+        padding: 20px 24px;
+        border: 1px solid  var(--card-border-color);
+        border-top: 0px;
+  } .card-link:hover,
+    .card-link:focus {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
              0px 4px 4px rgba(0, 0, 0, 0.06), 
              1px 4px 6px rgba(0, 0, 0, 0.16);
